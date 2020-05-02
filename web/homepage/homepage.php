@@ -1,5 +1,5 @@
 <?php
-    echo "It is "  . date("h:i:sa") . date("Y/m/d") . "<br>";
+    echo "Today is " . date("Y/m/d") . "<br>";
 ?>
 
 <!DOCTYPE html>
