@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>Homepage</h1>
-    <p class = "assign"><a href="assignments.html">Assignments</a></p>
+    <p class = "assign"><a href="assignments.php">Assignments</a></p>
     <p class = "description">
         I provided a Pokedex for my homepage. I thought it would be a fun way to show my interest in both Pokemon and web development. Try clicking one of the Pokemon...
     </p>
