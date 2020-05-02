@@ -1,4 +1,4 @@
-.flex-container {
+  .flex-container {
     display: flex;
     flex-wrap: wrap;
     align-items: space-between;
@@ -98,4 +98,36 @@
   h1 {
     text-align: center;
     font-family: Verdana;
+  }
+
+  a {
+    text-align: center;
+    font-family: Verdana;
+  }
+
+  .assign {
+    text-align: center;
+  }
+
+  .description {
+    font-family: Verdana;
+    text-align: center;
+    font-size: 14pt;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .assignList {
+    text-align: center;
+    font-size: 14pt;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
   }
