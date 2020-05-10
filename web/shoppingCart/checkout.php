@@ -1,3 +1,5 @@
+<h1 style="text-align: center">Checkout</h1>
+
 <form method="post" action="confirm.php">
     <div>
         <h3>

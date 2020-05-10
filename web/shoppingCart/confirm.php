@@ -5,7 +5,7 @@ session_start();
 
 ?>
 
-<h1 style="text-align: center">Order Confirmation<h1>
+<h1 style="text-align: center">Order Confirmation</h1>
 
 <?php
 

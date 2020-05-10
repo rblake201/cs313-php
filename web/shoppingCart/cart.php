@@ -2,6 +2,12 @@
 
 session_start();
 
+?>
+
+<h1 style="text-align: center">Shopping Cart</h1>
+
+<?php
+
 if(array_key_exists('clear',$_POST)){
     clearCart();
     header("Refresh:0");
