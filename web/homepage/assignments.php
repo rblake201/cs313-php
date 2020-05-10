@@ -17,6 +17,7 @@
     <ul>
         <li><a href="../hello.html">Prove 01</a></li>
         <li><a href="homepage.php">Prove 02</a></li>
+        <li><a href="../shoppingCart/browse.php">Prove 03</a></li>
         <li>coming soon...</li>
     </ul>
     </div>
