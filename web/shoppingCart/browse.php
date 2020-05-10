@@ -10,7 +10,7 @@ function addApple()
 
    array_push($_SESSION['cart'], 'apple');
 
-   $message = "added to cart";
+   $message = "apple added to cart";
    echo "<script type='text/javascript'>alert('$message');</script>";
 }
 
@@ -24,7 +24,7 @@ function addOrange()
 
     array_push($_SESSION['cart'], 'orange');
 
-    $message = "added to cart";
+    $message = "orange added to cart";
     echo "<script type='text/javascript'>alert('$message');</script>";
 }
 
@@ -38,7 +38,7 @@ function addBanana()
 
     array_push($_SESSION['cart'], 'banana');
 
-    $message = "added to cart";
+    $message = "banana added to cart";
     echo "<script type='text/javascript'>alert('$message');</script>";
 }
 
