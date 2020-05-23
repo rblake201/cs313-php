@@ -39,7 +39,7 @@ $db = getDb();
                 <th>Last Name</th>
             </tr>
             <?php
-            $sql = "SELECT first_name, last_name FROM contact";
+            $sql = "SELECT * FROM contact";
             $result = $db-> query($sql);
 
             if ($result-> num_rows > 0) {
