@@ -40,8 +40,8 @@ $db = getDb();
             </tr>
             <?php
             $result = $db->query("SELECT first_name, last_name FROM contact");
-                while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-                    echo $row['first_name'];
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></td>";
                 }
                 echo '</table>';
             ?>
