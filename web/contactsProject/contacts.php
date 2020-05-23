@@ -11,6 +11,7 @@ if(isset($_POST['search'])){
         echo "<tr><td>" . $row["first_name"]. "</td></td>";
     }
     echo '</table>';
+    echo "hello";
 }
 
 ?>
