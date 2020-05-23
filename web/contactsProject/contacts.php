@@ -40,7 +40,7 @@ $db = getDb();
             </tr>
             <?php
             $sql = "SELECT first_name, last_name FROM contact";
-            $result = $conn-> query($sql);
+            $result = $db-> query($sql);
 
             if ($result-> num_rows > 0) {
                 while ($row = $result-> fetch_assoc()) {
