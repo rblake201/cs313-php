@@ -39,18 +39,11 @@ $db = getDb();
                 <th>Last Name</th>
             </tr>
             <?php
-            $sql = "SELECT * FROM contact";
-            $result = $db-> query($sql);
-
-            if ($result-> num_rows > 0) {
-                while ($row = $result-> fetch_assoc()) {
-                    echo "<tr><td>". $row["first_name"] ."</td><td>". $row["last_name"] ."</td></tr>";
+            $result = $db->query("SELECT first_name, last_name FROM contact");
+                while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                    echo '<tr><td>'. $row['first_name'] .'</td><td>'. $row['last_name'] .'</td></tr>';
                 }
-                echo "</table>";
-            }
-            else {
-                echo "no results";
-            }
+                echo '</table>';
             ?>
     </div>
 </body>
