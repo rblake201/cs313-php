@@ -3,6 +3,12 @@
 require "databaseConnect.php";
 $db = getDb();
 
+echo "<table>
+<tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+</tr>"
+
 if(isset($_POST['search'])){
     $searchq = $_POST['search'];
 
@@ -11,23 +17,6 @@ if(isset($_POST['search'])){
         echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></td>";
     }
     echo "</table>";
-    echo "hello";
 }
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <table>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-        </tr>
-</body>
-</html>
