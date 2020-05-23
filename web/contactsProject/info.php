@@ -7,12 +7,18 @@ echo "<table>
 <tr>
     <th>First Name</th>
     <th>Last Name</th>
+    <th>Phone Number</th>
+    <th>Personal Email</th>
+    <th>Work Email</th>
+    <th>Facebook</th>
+    <th>Instagram</th>
+    <th>Discord</th>
 </tr>";
 
 if(isset($_POST['search'])){
     $searchq = $_POST['search'];
 
-    $search = $db->query("SELECT first_name, last_name FROM contact WHERE first_name= '" . $searchq . "';");
+    $search = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE first_name= '" . $searchq . "';");
     while ($row = $search->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></td>";
     }
