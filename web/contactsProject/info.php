@@ -7,7 +7,7 @@ echo "<table>
 <tr>
     <th>First Name</th>
     <th>Last Name</th>
-</tr>"
+</tr>";
 
 if(isset($_POST['search'])){
     $searchq = $_POST['search'];
