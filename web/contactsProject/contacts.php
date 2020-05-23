@@ -6,9 +6,9 @@ $db = getDb();
 if(isset($_POST['search'])){
     $searchq = $_POST['search'];
 
-    $search = $db->query("SELECT * FROM contact");
+    $search = $db->query("SELECT * FROM contact WHERE first_name='Blake'");
     while ($row = $search->fetch(PDO::FETCH_ASSOC)) {
-        echo "<tr><td>" . $row["first_name"]. "</td></td>";
+        echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></td>";
     }
     echo "</table>";
     echo "hello";
