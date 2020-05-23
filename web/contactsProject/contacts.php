@@ -3,6 +3,16 @@
 require "databaseConnect.php";
 $db = getDb();
 
+if(isset($_POST['search'])){
+    $searchq = $_POST['search'];
+
+    $search = $db->query("SELECT * FROM contact WHERE first_name = $searchq ");
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        echo "<tr><td>" . $row["first_name"]. "</td></td>";
+    }
+    echo '</table>';
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +42,7 @@ $db = getDb();
 <body>
     <h1 style="text-align:center">Contacts</h1>
     <h3>Contacts List</h3>
-    <div style="height:100px;width:300px;overflow:auto;">
+    <div style="height:100px;width:400px;overflow:auto;">
         <table>
             <tr>
                 <th>First Name</th>
@@ -45,6 +55,13 @@ $db = getDb();
                 }
                 echo '</table>';
             ?>
+    </div>
+    <h3>Search</h3>
+    <div style="width:400px;overflow:auto;">
+        <form action="info.php" method="post">
+            <input type="text" name="search" placeholder="Search for contact..."/>
+            <input type="submit" value="search"/>
+        </form>
     </div>
 </body>
 </html>
