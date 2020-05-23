@@ -1,7 +1,7 @@
 <?php
 
 require "databaseConnect.php";
-$db = get_db();
+$db = getDb();
 
 ?>
 
