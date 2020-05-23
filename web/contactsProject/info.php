@@ -48,7 +48,7 @@ echo "<table>
     <th>Discord</th>
 </tr>";
 
-if(isset($_POST['search'])){
+if(isset($_POST['searchf'])){
     $searchq = $_POST['searchf'];
 
     $search = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE first_name= '" . $searchq . "';");
@@ -59,7 +59,7 @@ if(isset($_POST['search'])){
     echo "</table>";
 }
 
-if(isset($_POST['search'])){
+if(isset($_POST['searchl'])){
     $searchq = $_POST['searchl'];
 
     $search = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE last_name= '" . $searchq . "';");
