@@ -51,6 +51,7 @@ $db = getDb();
             else {
                 echo "no results";
             }
+            ?>
     </div>
 </body>
 </html>
