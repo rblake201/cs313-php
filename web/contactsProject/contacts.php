@@ -3,17 +3,6 @@
 require "databaseConnect.php";
 $db = getDb();
 
-if(isset($_POST['search'])){
-    $searchq = $_POST['search'];
-
-    $search = $db->query("SELECT * FROM contact WHERE first_name = $searchq ");
-    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-        echo "<tr><td>" . $row["first_name"]. "</td></td>";
-    }
-    echo '</table>';
-    echo "hello";
-}
-
 ?>
 
 <!DOCTYPE html>
