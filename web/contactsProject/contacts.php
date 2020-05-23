@@ -32,7 +32,7 @@ $db = getDb();
 <body>
     <h1 style="text-align:center">Contacts</h1>
     <h3>Contacts List</h3>
-    <div style="height:100px;overflow:auto;">
+    <div style="height:100px;width:300px;overflow:auto;">
         <table>
             <tr>
                 <th>First Name</th>
