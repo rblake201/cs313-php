@@ -13,7 +13,8 @@ $db = getDb();
     <title>Document</title>
 </head>
 <body>
-    <h1>Contacts<h1>
+    <h1 style="text-align:center">Contacts</h1>
+    <h3>Contacts List</h3>
     <div style="height:100px;overflow:auto;">
         <table>
             <tr>
