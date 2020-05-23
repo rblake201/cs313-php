@@ -10,7 +10,24 @@ $db = getDb();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacts</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            color: #588c7e;
+            font-family: monospace;
+            font-size: 25px;
+            text-align: left;
+        }
+        th {
+            background-color: #588c7e;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+    </style>
 </head>
 <body>
     <h1 style="text-align:center">Contacts</h1>
@@ -21,7 +38,19 @@ $db = getDb();
                 <th>First Name</th>
                 <th>Last Name</th>
             </tr>
-        </table>
+            <?php
+            $sql = "SELECT first_name, last_name FROM contact";
+            $result = $conn-> query($sql);
+
+            if ($result-> num_rows > 0) {
+                while ($row = $result-> fetch_assoc()) {
+                    echo "<tr><td>". $row["first_name"] ."</td><td>". $row["last_name"] ."</td></tr>";
+                }
+                echo "</table>";
+            }
+            else {
+                echo "no results";
+            }
     </div>
 </body>
 </html>
