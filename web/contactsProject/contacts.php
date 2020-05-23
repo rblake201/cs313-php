@@ -3,17 +3,6 @@
 require "databaseConnect.php";
 $db = getDb();
 
-if(isset($_POST['search'])){
-    $searchq = $_POST['search'];
-
-    $search = $db->query("SELECT first_name, last_name FROM contact WHERE first_name= '" . $searchq . "';");
-    while ($row = $search->fetch(PDO::FETCH_ASSOC)) {
-        echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></td>";
-    }
-    echo "</table>";
-    echo "hello";
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +48,7 @@ if(isset($_POST['search'])){
     </div>
     <h3>Search</h3>
     <div style="width:400px;overflow:auto;">
-        <form action="contacts.php" method="post">
+        <form action="info.php" method="post">
             <input type="text" name="search" placeholder="Search for contact..."/>
             <input type="submit" value="search"/>
         </form>
