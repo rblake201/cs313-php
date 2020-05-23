@@ -4,8 +4,6 @@ require "databaseConnect.php";
 $db = getDb();
 
 
-}
-
 ?>
 
 <!DOCTYPE html>
