@@ -34,6 +34,7 @@ $db = getDb();
     <h1 style="text-align:center">Contacts</h1>
     <h3>Contacts List</h3>
     <div style="height:100px;width:500px;overflow:auto;">
+        <form action='info.php' method='post'>
         <table>
             <tr>
                 <th>First Name</th>
@@ -42,12 +43,13 @@ $db = getDb();
             <?php
             $result = $db->query("SELECT * FROM contact");
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></tr>" . "<form action="info.php" method="post">
-                                                                                                            <input type="hidden" name="$row[id]">
-                                                                                                            <input type="submit"value="Info"/>
-                                                                                                            </form>";
+                    $id = $row[id]
+
+                    echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></tr>" . "<input type='hidden' name='$id'>
+                                                                                                            <input type='submit'value='Info'/>";
                 }
                 echo '</table>';
+                echo '</form.'
             ?>
     </div>
     <h3>Search</h3>
