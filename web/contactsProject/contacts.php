@@ -46,7 +46,7 @@ $db = getDb();
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                     $id = $row[id];
 
-                    echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . "<input type='hidden' name=id='name_$id'>
+                    echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . "<input type='hidden' name='info'>
                                                                                                            <input type='submit' value='Info'/>" . "</td></tr>";
                 }
                 echo '</table>';

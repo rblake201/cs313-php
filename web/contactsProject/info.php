@@ -79,9 +79,14 @@ else if($_POST['searchf'] !== ''){
     }
 }
 
-foreach (array_keys($_POST) as $field)
-{
-    echo $_POST[$field];
+if(isset($_POST['info'])){
+    $searchq = $_POST['info'];
+
+    $searchi = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE first_name= '" . $searchq . "';");
+    while ($row = $searchi->fetch(PDO::FETCH_ASSOC)) {
+        echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["personal_email"] . "</td><td>"
+        . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></td>";
+    }
 }
 
 echo "</table>";
