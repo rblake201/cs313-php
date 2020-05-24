@@ -40,9 +40,12 @@ $db = getDb();
                 <th>Last Name</th>
             </tr>
             <?php
-            $result = $db->query("SELECT first_name, last_name FROM contact");
+            $result = $db->query("SELECT * FROM contact");
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></tr>";
+                    echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></tr>" . "<form action="info.php" method="post">
+                                                                                                            <input type="hidden" name="$row[id]">
+                                                                                                            <input type="submit"value="Info"/>
+                                                                                                            </form>";
                 }
                 echo '</table>';
             ?>

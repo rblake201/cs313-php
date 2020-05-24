@@ -30,7 +30,7 @@ $db = getDb();
     </style>
 </head>
 <body>
-    
+    <h3>Contact Info</h3>
 </body>
 </html>
 
@@ -73,6 +73,16 @@ else if($_POST['searchf'] !== ''){
     $searchq = $_POST['searchf'];
 
     $searchf = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE first_name= '" . $searchq . "';");
+    while ($row = $searchf->fetch(PDO::FETCH_ASSOC)) {
+        echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["personal_email"] . "</td><td>"
+        . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></td>";
+    }
+}
+
+if($_POST['$row[id]'] !== ''){
+    $search = $_POST['$row[id]'];
+
+    $search = $db->query("SELECT * FROM info WHERE contact_id= '" . $row[id] . "';");
     while ($row = $searchf->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["personal_email"] . "</td><td>"
         . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></td>";
