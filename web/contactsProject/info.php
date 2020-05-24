@@ -31,7 +31,7 @@ $db = getDb();
 </head>
 <body>
     <a href="contacts.php">Contacts</a>
-    <h3 style="text-align: center">Contact Info</h3>
+    <h1 style="text-align: center">Contact Info</h1>
 </body>
 </html>
 

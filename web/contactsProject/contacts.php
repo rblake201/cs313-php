@@ -33,6 +33,7 @@ $db = getDb();
 <body>
     <h1 style="text-align:center">Contacts</h1>
     <h3>Contacts List</h3>
+    <div style="flex-box">
     <div style="height:300px;width:500px;overflow:auto;">
         <table>
             <tr>
@@ -56,6 +57,7 @@ $db = getDb();
                 echo '</table>';
             ?>
     </div>
+    <br>
     <h3>Search</h3>
     <div style="width:500px;overflow:auto;">
         <form action="info.php" method="post">
@@ -63,6 +65,7 @@ $db = getDb();
             <input type="text" name="searchl" placeholder="Search by last name..."/>
             <input type="submit" value="search"/>
         </form>
+    </div>
     </div>
 </body>
 </html>
