@@ -79,15 +79,14 @@ else if($_POST['searchf'] !== ''){
     }
 }
 
-if($_POST['name_$id']){
-    $search = $_POST['$row[id]'];
 
-    $search = $db->query("SELECT * FROM info WHERE contact_id= '" . $row[id] . "';");
+    $search = $_POST['name'];
+
+    $search = $db->query("SELECT * FROM info WHERE contact_id= '" . $search . "';");
     while ($row = $searchf->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["personal_email"] . "</td><td>"
         . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></td>";
     }
-}
 
 echo "</table>";
 
