@@ -48,7 +48,7 @@ echo "<table>
     <th>Discord</th>
 </tr>";
 
-if(isset(($_POST['searchf'] && $_POST['searchf'] != ''), ($_POST['searchl'] && $_POST['searchf'] != ''))){
+if(!empty($_POST['searchf'], $_POST['searchl'])){
     $searchqf = $_POST['searchf'];
     $searchql = $_POST['searchl'];
 
