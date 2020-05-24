@@ -33,12 +33,13 @@ $db = getDb();
 <body>
     <h1 style="text-align:center">Contacts</h1>
     <h3>Contacts List</h3>
-    <div style="height:100px;width:500px;overflow:auto;">
+    <div style="height:300px;width:500px;overflow:auto;">
         <form action='info.php' method='post'>
         <table>
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Info</th>
             </tr>
             <?php
             $result = $db->query("SELECT * FROM contact");
