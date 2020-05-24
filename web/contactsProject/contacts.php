@@ -51,8 +51,8 @@ $db = getDb();
                                                                                                            <input type='submit' value='Info'/>" . "</td></tr>";
 
                     $i++;
+                    echo '</form>';
                 }
-                echo '</form>';
                 echo '</table>';
             ?>
     </div>
