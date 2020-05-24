@@ -62,7 +62,7 @@ $db = getDb();
         <form action="info.php" method="post">
             <input type="text" name="searchf" placeholder="Search by first name..."/>
             <input type="text" name="searchl" placeholder="Search by last name..."/>
-            <input type="submit" value="search"/>
+            <input type="submit" value="Search"/>
         </form>
     </div>
     <h3>Add contacts</h3>
