@@ -58,6 +58,10 @@ if($_POST['searchf'] !== '' && $_POST['searchl'] !== ''){
         . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></td>";
     }
 
+    if($row == NULL){
+        echo "hello";
+    }
+
 }
 else if($_POST['searchl'] !== ''){
     $searchq = $_POST['searchl'];
