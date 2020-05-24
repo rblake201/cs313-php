@@ -65,7 +65,7 @@ $db = getDb();
             <input type="submit" value="search"/>
         </form>
     </div>
-    <h3>Search</h3>
+    <h3>Add contacts</h3>
     <div>
         <form method="post">
             <input type="text" name="addf" placeholder="Enter first name..."/>
