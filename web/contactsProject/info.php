@@ -49,7 +49,7 @@ echo "<table>
 </tr>";
 
 if(isset($_POST['searchf'], $_POST['searchl'])){
-    $searchqf = $_POST['searchl'];
+    $searchqf = $_POST['searchf'];
     $searchql = $_POST['searchl'];
 
     $search = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE last_name= '" . $searchqf . "' AND first_name= '" . $searchql . "';");
