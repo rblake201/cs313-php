@@ -33,7 +33,6 @@ $db = getDb();
 <body>
     <h1 style="text-align:center">Contacts</h1>
     <h3>Contacts List</h3>
-    <div style="flex-box">
     <div style="height:300px;width:500px;overflow:auto;">
         <table>
             <tr>
@@ -59,13 +58,26 @@ $db = getDb();
     </div>
     <br>
     <h3>Search</h3>
-    <div style="width:500px;overflow:auto;">
+    <div>
         <form action="info.php" method="post">
             <input type="text" name="searchf" placeholder="Search by first name..."/>
             <input type="text" name="searchl" placeholder="Search by last name..."/>
             <input type="submit" value="search"/>
         </form>
     </div>
+    <h3>Search</h3>
+    <div>
+        <form method="post">
+            <input type="text" name="addf" placeholder="Enter first name..."/>
+            <input type="text" name="addl" placeholder="Enter last name..."/>
+            <input type="text" name="addl" placeholder="Enter phone number..."/>
+            <input type="text" name="addl" placeholder="Enter personal email..."/>
+            <input type="text" name="addl" placeholder="Enter work email..."/>
+            <input type="text" name="addl" placeholder="Enter facebook name..."/>
+            <input type="text" name="addl" placeholder="Enter instagram name..."/>
+            <input type="text" name="addl" placeholder="Enter discord name..."/>
+            <input type="submit" value="search"/>
+        </form>
     </div>
 </body>
 </html>
