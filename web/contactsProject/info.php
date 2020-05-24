@@ -30,6 +30,7 @@ $db = getDb();
     </style>
 </head>
 <body>
+    <a href="contacts.php" value="return to contacts page">
     <h3>Contact Info</h3>
 </body>
 </html>
