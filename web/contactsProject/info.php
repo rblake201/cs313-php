@@ -79,7 +79,7 @@ else if($_POST['searchf'] !== ''){
     }
 }
 
-if(isset($_POST['name_$id'])){
+if($_POST['name_$id']){
     $search = $_POST['$row[id]'];
 
     $search = $db->query("SELECT * FROM info WHERE contact_id= '" . $row[id] . "';");
