@@ -76,7 +76,7 @@ $db = getDb();
             <input type="text" name="addl" placeholder="Enter facebook name..."/>
             <input type="text" name="addl" placeholder="Enter instagram name..."/>
             <input type="text" name="addl" placeholder="Enter discord name..."/>
-            <input type="submit" value="search"/>
+            <input type="submit" value="Add"/>
         </form>
     </div>
 </body>
