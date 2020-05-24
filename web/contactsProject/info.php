@@ -49,24 +49,25 @@ echo "<table>
 </tr>";
 
 if(isset($_POST['searchf'])){
-    $searchqf = $_POST['searchf'];
+    $searchq = $_POST['searchf'];
 
-    $searchf = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE first_name= '" . $searchqf . "';");
+    $searchf = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE first_name= '" . $searchq . "';");
     while ($row = $searchf->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["personal_email"] . "</td><td>"
         . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></td>";
     }
-    echo "</table>";
+}
 
-    $searchql = $_POST['searchl'];
+if(isset($_POST['searchl'])){
+    $searchq = $_POST['searchl'];
 
-    $searchl = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE last_name= '" . $searchql . "';");
+    $searchl = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE last_name= '" . $searchq . "';");
     while ($row = $searchl->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["personal_email"] . "</td><td>"
         . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></td>";
     }
-    echo "</table>";
 }
 
+echo "</table";
 
 ?>
