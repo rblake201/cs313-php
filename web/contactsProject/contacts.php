@@ -43,7 +43,7 @@ $db = getDb();
             <?php
             $result = $db->query("SELECT * FROM contact");
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                    $id = $row[id]
+                    $id = $row[id];
 
                     echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></tr>" . "<input type='hidden' name='$id'>
                                                                                                             <input type='submit'value='Info'/>";
