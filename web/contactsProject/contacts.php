@@ -33,7 +33,7 @@ $db = getDb();
 <body>
     <h1 style="text-align:center">Contacts</h1>
     <h3>Contacts List</h3>
-    <div style="height:100px;width:400px;overflow:auto;">
+    <div style="height:100px;width:500px;overflow:auto;">
         <table>
             <tr>
                 <th>First Name</th>
@@ -42,13 +42,13 @@ $db = getDb();
             <?php
             $result = $db->query("SELECT first_name, last_name FROM contact");
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></td>";
+                    echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td></tr>";
                 }
                 echo '</table>';
             ?>
     </div>
     <h3>Search</h3>
-    <div style="width:400px;overflow:auto;">
+    <div style="width:500px;overflow:auto;">
         <form action="info.php" method="post">
             <input type="text" name="searchf" placeholder="Search by first name..."/>
             <input type="text" name="searchl" placeholder="Search by last name..."/>
