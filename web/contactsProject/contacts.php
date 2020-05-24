@@ -44,12 +44,10 @@ $db = getDb();
             <?php
             $result = $db->query("SELECT * FROM contact");
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                    $i = $row[id];
+                    $id = $row[id];
 
-                    echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . "<input type='hidden' name=id="'.$i.'">
+                    echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . "<input type='hidden' name=id='name_$id'>
                                                                                                            <input type='submit' value='Info'/>" . "</td></tr>";
-
-                    $i++;
                 }
                 echo '</table>';
                 echo '</form>';
