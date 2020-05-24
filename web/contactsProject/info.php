@@ -82,12 +82,11 @@ else if($_POST['searchf'] !== ''){
 if(isset($_POST['info'])){
     $searchq = $_POST['info'];
 
-    $searchi = $db->query("SELECT * FROM contact WHERE contact_id= '" . $searchq . "';");
+    $searchi = $db->query("SELECT * FROM info WHERE contact_id= '" . $searchq . "';");
     while ($row = $searchi->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["personal_email"] . "</td><td>"
         . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></td>";
     }
-    echo "hello"
 }
 
 echo "</table>";
