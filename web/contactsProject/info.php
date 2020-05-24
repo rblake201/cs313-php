@@ -57,7 +57,10 @@ if(isset($_POST['searchf'], $_POST['searchl'])){
         echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["personal_email"] . "</td><td>"
         . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></td>";
     }
-} else if(isset($_POST['searchl'])){
+
+    echo "hello";
+}
+else if(isset($_POST['searchl'])){
     $searchq = $_POST['searchl'];
 
     $searchl = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE last_name= '" . $searchq . "';");
@@ -65,7 +68,8 @@ if(isset($_POST['searchf'], $_POST['searchl'])){
         echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["personal_email"] . "</td><td>"
         . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></td>";
     }
-} else if(isset($_POST['searchf'])){
+}
+else if(isset($_POST['searchf'])){
     $searchq = $_POST['searchf'];
 
     $searchf = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE first_name= '" . $searchq . "';");
