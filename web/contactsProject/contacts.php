@@ -49,7 +49,7 @@ $db = getDb();
                                                                                                            <input type='submit'value='Info'/>" . "</td></tr>";
                 }
                 echo '</table>';
-                echo '</form.';
+                echo '</form>';
             ?>
     </div>
     <h3>Search</h3>
