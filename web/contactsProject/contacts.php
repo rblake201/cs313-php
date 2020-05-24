@@ -50,8 +50,8 @@ $db = getDb();
     <h3>Search</h3>
     <div style="width:400px;overflow:auto;">
         <form action="info.php" method="post">
-            <input type="text" name="searchf" placeholder="Search by first name..."/>
-            <input type="text" name="searchl" placeholder="Search by last name..."/>
+            <input type="text" name="searchf" />
+            <input type="text" name="searchl" />
             <input type="submit" value="search"/>
         </form>
     </div>
