@@ -46,7 +46,7 @@ $db = getDb();
                     $id = $row[id];
 
                     echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . "<input type='hidden' name='$id'>
-                                                                                                            <input type='submit'value='Info'/>" . "</td><tr>";
+                                                                                                           <input type='submit'value='Info'/>" . "</td></tr>";
                 }
                 echo '</table>';
                 echo '</form.';
