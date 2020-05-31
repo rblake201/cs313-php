@@ -98,8 +98,8 @@ $db = getDb();
 
 
         $query = "INSERT INTO contact (first_name, last_name) VALUES ('".$addfn."','".$addln."');
-                  INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
-                  VALUES('contact_id', '".$addpn."','".$addpe."','".$addwe."','".$addfan."','".$addin."','".$adddn."');";
+                  INSERT INTO info (phone, personal_email, work_email, facebook, instagram, discord)
+                  VALUES('".$addpn."','".$addpe."','".$addwe."','".$addfan."','".$addin."','".$adddn."');";
 
         $result = $db->query($query);
     }
