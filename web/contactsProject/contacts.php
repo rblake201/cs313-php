@@ -87,7 +87,7 @@ $db = getDb();
 
     if(isset($_POST['posted']))
     {
-        if($_POST['searchf'] == '')
+        if($_POST['addfn'] == '')
         {
             echo '<script>alert("Please enter first name")</script>';
         }
