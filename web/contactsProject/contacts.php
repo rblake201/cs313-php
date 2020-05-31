@@ -86,19 +86,30 @@ $db = getDb();
 <?php
 
     if(isset($_POST['posted'])){
-    $query = "INSERT INTO contact (first_name, last_name) VALUES ('$_POST['addfn']','$_POST['addln']');
-              INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
-              VALUES('contact_id', '$_POST['addpn']', '$_POST['addpe']', '$_POST['addwe']', '$_POST['addfan']', '$_POST['addin']', '$_POST['adddn']');";
-/*     $query = "WITH new_contact AS (
-              INSERT INTO contact (first_name, last_name)
-              VALUES ('$_POST[addfn]', '$_POST[addln]');
-              RETURNING id
-              )
-              INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord) VALUES(
-              SELECT id, '$_POST[addpn]', '$_POST[addpe]', '$_POST[addwe]', '$_POST[addfan]', '$_POST[addin]', '$_POST[adddn]'
-              FROM   ins0
-              );" */
+        $addfn = $_POST['addfn'];
+        $addln = $_POST['addln'];
+        $addpn = $_POST['addpn'];
+        $addpe = $_POST['addpe'];
+        $addwe = $_POST['addwe'];
+        $addfan = $_POST['addfan'];
+        $addin = $_POST['addin'];
+        $adddn = $_POST['adddn'];
 
-    $result = $db->query($query);
+
+
+        $query = "INSERT INTO contact (first_name, last_name) VALUES ('".$addfn."','".$addln."');";
+/*                 INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
+                VALUES('contact_id', '$_POST['addpn']', '$_POST['addpe']', '$_POST['addwe']', '$_POST['addfan']', '$_POST['addin']', '$_POST['adddn']');";
+        $query = "WITH new_contact AS (
+                INSERT INTO contact (first_name, last_name)
+                VALUES ('$_POST[addfn]', '$_POST[addln]');
+                RETURNING id
+                )
+                INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord) VALUES(
+                SELECT id, '$_POST[addpn]', '$_POST[addpe]', '$_POST[addwe]', '$_POST[addfan]', '$_POST[addin]', '$_POST[adddn]'
+                FROM   ins0
+                );" */
+
+        $result = $db->query($query);
     }
 ?>
