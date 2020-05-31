@@ -48,7 +48,9 @@ $db = getDb();
                     $id = $row[id];
 
                     echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . "<input type='hidden' name='info' value='$id'>
-                                                                                                           <input type='submit' value='Info'/>" . "</td></tr>";
+                                                                                                           <input type='submit' value='Info'/>"
+                                                                                          . "</td><td>" . "<input type='hidden' name='delete' value='$id'>
+                                                                                                           <input type='submit' value='Delete'/>" . "</td></tr>";
 
                     $i++;
                     echo '</form>';
@@ -104,11 +106,6 @@ $db = getDb();
             $addin = $_POST['addin'];
             $adddn = $_POST['adddn'];
 
-
-
-    /*          $query = "INSERT INTO contact (first_name, last_name) VALUES ('".$addfn."','".$addln."');
-                        INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
-                        VALUES('contact_id', '".$addpn."','".$addpe."','".$addwe."','".$addfan."','".$addin."','".$adddn."');"; */
             $query = "WITH new_contact AS (
                         INSERT INTO contact(first_name, last_name) VALUES ('".$addfn."','".$addln."') RETURNING id)
                         INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
