@@ -96,6 +96,6 @@ $db = getDb();
               FROM   ins0
               );" */
 
-    $result = pg_query($db, $query);
+//    $result = pg_query($db, $query);
 
 ?>
