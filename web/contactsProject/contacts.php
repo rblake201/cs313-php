@@ -85,32 +85,42 @@ $db = getDb();
 
 <?php
 
-    if(isset($_POST['posted'])){
-        $addfn = $_POST['addfn'];
-        $addln = $_POST['addln'];
-        $addpn = $_POST['addpn'];
-        $addpe = $_POST['addpe'];
-        $addwe = $_POST['addwe'];
-        $addfan = $_POST['addfan'];
-        $addin = $_POST['addin'];
-        $adddn = $_POST['adddn'];
+    if(isset($_POST['posted']))
+    {
+        if($_POST['searchf'] == '')
+        {
+            echo '<script>alert("Please enter first name")</script>';
+        }
+        else
+        {
+
+        
+            $addfn = $_POST['addfn'];
+            $addln = $_POST['addln'];
+            $addpn = $_POST['addpn'];
+            $addpe = $_POST['addpe'];
+            $addwe = $_POST['addwe'];
+            $addfan = $_POST['addfan'];
+            $addin = $_POST['addin'];
+            $adddn = $_POST['adddn'];
 
 
 
-/*          $query = "INSERT INTO contact (first_name, last_name) VALUES ('".$addfn."','".$addln."');
-                      INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
-                      VALUES('contact_id', '".$addpn."','".$addpe."','".$addwe."','".$addfan."','".$addin."','".$adddn."');"; */
-        $query = "WITH new_contact AS (
-                    INSERT INTO contact(first_name, last_name) VALUES ('".$addfn."','".$addln."') RETURNING id)
-                    INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
-                    SELECT id, '".$addpn."', '".$addpe."', '".$addwe."', '".$addfan."', '".$addin."', '".$adddn."'
-                    FROM new_contact;";
+    /*          $query = "INSERT INTO contact (first_name, last_name) VALUES ('".$addfn."','".$addln."');
+                        INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
+                        VALUES('contact_id', '".$addpn."','".$addpe."','".$addwe."','".$addfan."','".$addin."','".$adddn."');"; */
+            $query = "WITH new_contact AS (
+                        INSERT INTO contact(first_name, last_name) VALUES ('".$addfn."','".$addln."') RETURNING id)
+                        INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
+                        SELECT id, '".$addpn."', '".$addpe."', '".$addwe."', '".$addfan."', '".$addin."', '".$adddn."'
+                        FROM new_contact;";
 
 
-        $result = $db->query($query);
+            $result = $db->query($query);
 
-        echo '<script>alert("Contact Added!")</script>';
+            echo '<script>alert("Contact Added!")</script>';
 
-        header("Refresh:0");
+            header("Refresh:0");
+        }
     }
 ?>
