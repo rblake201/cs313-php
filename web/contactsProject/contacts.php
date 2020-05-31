@@ -28,10 +28,26 @@ $db = getDb();
         tr:nth-child(even) {
             background-color: #f2f2f2
         }
+        /* Create three equal columns that floats next to each other */
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
     </style>
 </head>
 <body>
     <h1 style="text-align:center">Contacts</h1>
+    <div class="row">
+    <div class="column">
     <h3>Contacts List</h3>
     <div style="height:300px;width:500px;overflow:auto;">
         <table>
@@ -58,9 +74,9 @@ $db = getDb();
                 echo '</table>';
             ?>
     </div>
-    <br>
+    </div>
+    <div class="column">
     <h3>Search</h3>
-    <div>
         <form action="info.php" method="post">
             <input type="text" name="searchf" placeholder="Search by first name..."/>
             <input type="text" name="searchl" placeholder="Search by last name..."/>
@@ -68,7 +84,7 @@ $db = getDb();
         </form>
     </div>
     <h3>Add contacts</h3>
-    <div>
+    <div class="column">
         <form name="addform" action="contacts.php" method="post">
             <input type="hidden" name="posted" value=true>
             <input type="text" name="addfn" placeholder="Enter first name..."/>
@@ -81,6 +97,7 @@ $db = getDb();
             <input type="text" name="adddn" placeholder="Enter discord name..."/>
             <input type="submit" value="Add"/>
         </form>
+    </div>
     </div>
 </body>
 </html>
