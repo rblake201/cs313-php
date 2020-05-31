@@ -81,13 +81,13 @@ $db = getDb();
     <div class="column">
     <h3>Search</h3>
         <form action="info.php" method="post">
-            <input type="text" name="searchf" placeholder="Search by first name..."/>
-            <input type="text" name="searchl" placeholder="Search by last name..."/>
+            <input type="text" name="searchf" placeholder="Search by first name..."/><br>
+            <input type="text" name="searchl" placeholder="Search by last name..."/><br>
             <input type="submit" value="Search"/>
         </form>
     </div>
     <div class="column">
-    <h3>Add contacts</h3>
+    <h3>Add contact</h3>
         <form name="addform" action="contacts.php" method="post">
             <input type="hidden" name="posted" value=true>
             <input type="text" name="addfn" placeholder="Enter first name..."/><br>
