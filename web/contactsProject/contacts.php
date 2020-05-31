@@ -103,10 +103,12 @@ $db = getDb();
         $query = "WITH new_contact AS (
                     INSERT INTO contact(first_name, last_name) VALUES ('".$addfn."','".$addln."') RETURNING id)
                     INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
-                    SELECT id, '".$addpn."', '".$addpn."', '".$addpn."', '".$addpn."', '".$addpn."', '".$addpn."'
+                    SELECT id, '".$addpn."', '".$addpe."', '".$addwe."', '".$addfan."', '".$addin."', '".$adddn."'
                     FROM new_contact;";
 
 
         $result = $db->query($query);
+
+        echo "alert('Contact added!');";
     }
 ?>
