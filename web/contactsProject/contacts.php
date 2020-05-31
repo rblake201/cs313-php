@@ -49,6 +49,7 @@ $db = getDb();
     <div class="row">
     <div class="column">
     <h3>Contacts List</h3>
+    <div style="height:300px;width:auto;overflow:auto;">
         <table>
             <tr>
                 <th>First Name</th>
@@ -72,6 +73,7 @@ $db = getDb();
                 }
                 echo '</table>';
             ?>
+    </div>
     </div>
     <div class="column">
     <h3>Search</h3>
