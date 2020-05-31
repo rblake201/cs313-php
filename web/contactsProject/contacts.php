@@ -68,7 +68,6 @@ $db = getDb();
     <h3>Add contacts</h3>
     <div>
         <form name="addform" action="contacts.php" method="post">
-            <input type="hidden" name="posted" value=true>
             <input type="text" name="addfn" placeholder="Enter first name..."/>
             <input type="text" name="addln" placeholder="Enter last name..."/>
             <input type="text" name="addpn" placeholder="Enter phone number..."/>
@@ -85,7 +84,7 @@ $db = getDb();
 
 <?php
 
-    if(isset($_POST['posted'])){
+    if($_POST['addfn'] !== ''){
         $addfn = $_POST['addfn'];
         $addln = $_POST['addln'];
         $addpn = $_POST['addpn'];
@@ -112,5 +111,9 @@ $db = getDb();
         echo '<script>alert("Contact Added!")</script>';
 
         header("Refresh:0");
+    }
+    else
+    {
+        echo '<script>alert("Please enter first name")</script>';
     }
 ?>
