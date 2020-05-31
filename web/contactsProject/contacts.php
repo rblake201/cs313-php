@@ -51,7 +51,7 @@ $db = getDb();
                                                                                                            <input type='submit' value='Info'/>"
                                                                                           . "</td><td>" . "</form>" . "<form name='deleteForm_$i' action='contacts.php' method='post'>" .
                                                                                                           "<input type='hidden' name='delete' value='$id'>
-                                                                                                           <input type='submit' value='Delete'/>" . "</td></tr>";
+                                                                                                           <input type='submit' value='X'/>" . "</td></tr>";
 
                     echo '</form>';
                 }
@@ -126,6 +126,8 @@ $db = getDb();
     
         $delete = $db->query("DELETE FROM info WHERE contact_id= " . $searchq . ";");
         $delete1 = $db->query("DELETE FROM contact WHERE id= " . $searchq . ";");
+
+        echo '<script>alert("Contact Deleted!")</script>';
     
         header("Refresh:0");
     }
