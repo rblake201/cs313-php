@@ -68,6 +68,7 @@ $db = getDb();
     <h3>Add contacts</h3>
     <div>
         <form action="contacts.php" method="post">
+            <input type="hidden" name="posted" value=true>
             <input type="text" name="addfn" placeholder="Enter first name..."/>
             <input type="text" name="addln" placeholder="Enter last name..."/>
             <input type="text" name="addpn" placeholder="Enter phone number..."/>
@@ -83,6 +84,7 @@ $db = getDb();
 </html>
 
 <?php
+    if(isset($_POST['posted'])){
     $query = "INSERT INTO contact (first_name, last_name) VALUES ('$_POST[addfn]','$_POST[addln]');
               INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
               VALUES('contact_id', '$_POST[addpn]', '$_POST[addpe]', '$_POST[addwe]', '$_POST[addfan]', '$_POST[addin]', '$_POST[adddn]');";
@@ -96,5 +98,6 @@ $db = getDb();
               FROM   ins0
               );" */
 
-    $result = pg_query($db, $query);
+    $result = $db->query($query);
+    }
 ?>
