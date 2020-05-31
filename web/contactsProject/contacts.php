@@ -83,7 +83,7 @@ $db = getDb();
 </html>
 
 <?php
-    $query = "INSERT INTO contact (first_name, last_name) VALUES ('$_POST[addfn]','$_POST[addln]') RETURNING id;
+    $query = "INSERT INTO contact (first_name, last_name) VALUES ('$_POST[addfn]','$_POST[addln]');
               INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
               VALUES('contact_id', '$_POST[addpn]', '$_POST[addpe]', '$_POST[addwe]', '$_POST[addfan]', '$_POST[addin]', '$_POST[adddn]');"
 /*     $query = "WITH new_contact AS (
