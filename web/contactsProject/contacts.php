@@ -42,7 +42,7 @@ $db = getDb();
                 <th>Delete</th>
             </tr>
             <?php
-            $result = $db->query("SELECT * FROM contact");
+            $result = $db->query("SELECT * FROM contact ORDER BY first_name ASC");
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                     echo "<form name='infoForm_$i' action='info.php' method='post'>";
                     $id = $row[id];
