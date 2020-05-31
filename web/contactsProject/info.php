@@ -95,8 +95,8 @@ echo "</table>";
 if(isset($_POST['delete'])){
     $searchq = $_POST['delete'];
 
-    $searchi = $db->query("DELETE FROM info WHERE contact_id= '" . $searchq . "';");
-    $searchi = $db->query("DELETE FROM contact WHERE id= '" . $searchq . "';");
+    $delete = $db->query("DELETE FROM info WHERE contact_id= " . $searchq . ";");
+    $delete1 = $db->query("DELETE FROM contact WHERE id= " . $searchq . ";");
 
     header("Location: contacts.php");
     exit();

@@ -39,6 +39,7 @@ $db = getDb();
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Info</th>
+                <th>Delete</th>
             </tr>
             <?php
             $result = $db->query("SELECT * FROM contact");
