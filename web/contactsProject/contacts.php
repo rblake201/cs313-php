@@ -45,12 +45,13 @@ $db = getDb();
             $result = $db->query("SELECT * FROM contact");
                 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                     $i = 0;
-                    echo "<form name='myform_$i' action='info.php' method='post'>";
+                    echo "<form name='infoForm_$i' action='info.php' method='post'>";
                     $id = $row[id];
 
                     echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . "<input type='hidden' name='info' value='$id'>
                                                                                                            <input type='submit' value='Info'/>"
-                                                                                          . "</td><td>" . "<input type='hidden' name='delete' value='$id'>
+                                                                                          . "</td><td>" . "</form>" . "<form name='deleteForm_$i' action='info.php' method='post'>" .
+                                                                                                          "<input type='hidden' name='delete' value='$id'>
                                                                                                            <input type='submit' value='Delete'/>" . "</td></tr>";
 
                     $i++;
