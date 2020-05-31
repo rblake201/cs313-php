@@ -109,8 +109,6 @@ $db = getDb();
 
         $result = $db->query($query);
 
-        echo '<script language="javascript">';
-        echo 'alert("message successfully sent")';
-        echo '</script>';
+        echo '<script>alert("Contact Added!")</script>';
     }
 ?>
