@@ -90,14 +90,14 @@ $db = getDb();
     <h3>Add contacts</h3>
         <form name="addform" action="contacts.php" method="post">
             <input type="hidden" name="posted" value=true>
-            <input type="text" name="addfn" placeholder="Enter first name..."/>
-            <input type="text" name="addln" placeholder="Enter last name..."/>
-            <input type="text" name="addpn" placeholder="Enter phone number..."/>
-            <input type="text" name="addpe" placeholder="Enter personal email..."/>
-            <input type="text" name="addwe" placeholder="Enter work email..."/>
-            <input type="text" name="addfan" placeholder="Enter facebook name..."/>
-            <input type="text" name="addin" placeholder="Enter instagram name..."/>
-            <input type="text" name="adddn" placeholder="Enter discord name..."/>
+            <input type="text" name="addfn" placeholder="Enter first name..."/><br>
+            <input type="text" name="addln" placeholder="Enter last name..."/><br>
+            <input type="text" name="addpn" placeholder="Enter phone number..."/><br>
+            <input type="text" name="addpe" placeholder="Enter personal email..."/><br>
+            <input type="text" name="addwe" placeholder="Enter work email..."/><br>
+            <input type="text" name="addfan" placeholder="Enter facebook name..."/><br>
+            <input type="text" name="addin" placeholder="Enter instagram name..."/><br>
+            <input type="text" name="adddn" placeholder="Enter discord name..."/><br>
             <input type="submit" value="Add"/>
         </form>
     </div>
