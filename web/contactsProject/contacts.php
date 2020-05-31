@@ -67,17 +67,32 @@ $db = getDb();
     </div>
     <h3>Add contacts</h3>
     <div>
-        <form method="post">
-            <input type="text" name="addf" placeholder="Enter first name..."/>
-            <input type="text" name="addl" placeholder="Enter last name..."/>
-            <input type="text" name="addl" placeholder="Enter phone number..."/>
-            <input type="text" name="addl" placeholder="Enter personal email..."/>
-            <input type="text" name="addl" placeholder="Enter work email..."/>
-            <input type="text" name="addl" placeholder="Enter facebook name..."/>
-            <input type="text" name="addl" placeholder="Enter instagram name..."/>
-            <input type="text" name="addl" placeholder="Enter discord name..."/>
+        <form action="contacts.php" method="post">
+            <input type="text" name="addfn" placeholder="Enter first name..."/>
+            <input type="text" name="addln" placeholder="Enter last name..."/>
+            <input type="text" name="addpn" placeholder="Enter phone number..."/>
+            <input type="text" name="addpe" placeholder="Enter personal email..."/>
+            <input type="text" name="addwe" placeholder="Enter work email..."/>
+            <input type="text" name="addfan" placeholder="Enter facebook name..."/>
+            <input type="text" name="addin" placeholder="Enter instagram name..."/>
+            <input type="text" name="adddn" placeholder="Enter discord name..."/>
             <input type="submit" value="Add"/>
         </form>
     </div>
 </body>
 </html>
+
+<?php
+    $query = "INSERT INTO contact (first_name, last_name) VALUES ('$_POST[addfn]','$_POST[addln]') RETURNING id";
+    $query = "WITH ins0 AS (
+              INSERT INTO contact (first_name, last_name)
+              VALUES ('$_POST[addfn]', '$_POST[addln]');
+              RETURNING id
+              )
+              INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
+              SELECT id, '$_POST[addpn]', '$_POST[addpe]', '$_POST[addwe]', '$_POST[addfan]', '$_POST[addin]', '$_POST[adddn]'
+              FROM   ins0;"
+
+    $result = pg_query($db, $query);
+
+?>
