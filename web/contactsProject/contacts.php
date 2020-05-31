@@ -28,6 +28,9 @@ $db = getDb();
         tr:nth-child(even) {
             background-color: #f2f2f2
         }
+        * {
+             box-sizing: border-box;
+        }
         /* Create three equal columns that floats next to each other */
         .column {
         float: left;
