@@ -98,7 +98,4 @@ if(isset($_POST['delete'])){
     $delete = $db->query("DELETE FROM info WHERE contact_id= " . $searchq . ";");
     $delete1 = $db->query("DELETE FROM contact WHERE id= " . $searchq . ";");
 
-    header("Location: contacts.php");
-    exit();
-
 ?>
