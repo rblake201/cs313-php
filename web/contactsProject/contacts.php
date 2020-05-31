@@ -83,8 +83,8 @@ $db = getDb();
             <input type="submit" value="Search"/>
         </form>
     </div>
-    <h3>Add contacts</h3>
     <div class="column">
+    <h3>Add contacts</h3>
         <form name="addform" action="contacts.php" method="post">
             <input type="hidden" name="posted" value=true>
             <input type="text" name="addfn" placeholder="Enter first name..."/>
