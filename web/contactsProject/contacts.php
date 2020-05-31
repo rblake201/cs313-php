@@ -84,6 +84,10 @@ $db = getDb();
 </html>
 
 <?php
+
+require "databaseConnect.php";
+$db = getDb();
+
     if(isset($_POST['posted'])){
     $query = "INSERT INTO contact (first_name, last_name) VALUES ('$_POST[addfn]','$_POST[addln]');
               INSERT INTO info (contact_id, phone, personal_email, work_email, facebook, instagram, discord)
