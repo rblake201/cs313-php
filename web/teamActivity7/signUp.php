@@ -29,7 +29,7 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     $hashpass = password_hash($pass, PASSWORD_DEFAULT);
 
     require("db_connect.php");
-    $db = get_db();
+    $db = getDb();
 
     $query = "INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');";
     $statement = $db->query($query);
