@@ -37,7 +37,7 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     $hashpass = password_hash($pass, PASSWORD_DEFAULT);
 
     $query = "INSERT INTO _user(username, pass) VALUES('blake', 'password');";
-    $statement = $db->query($query);
+    $statement = $db->query("INSERT INTO _user(username, pass) VALUES('blake', 'password');");
 
     header("Location: signIn.php");
 
