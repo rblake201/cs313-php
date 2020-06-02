@@ -22,8 +22,6 @@
 
 if($_POST['user'] != "" && $_POST['pass'] != "")
 {
-    echo "hello";
-
     $user = $_POST['user'];
     $pass = $_POST['pass'];
 
@@ -33,8 +31,7 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     require("../contactsProject/databaseConnect.php");
     $db - get_db();
 
-    $query = "INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');";
-    $statement = $db->query($query);
+    $statement = $db->query("INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');");
 
     header("Location: signIn.php");
 
