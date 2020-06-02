@@ -28,7 +28,7 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     $user = htmlspecialchars($user);
     $hashpass = password_hash($pass, PASSWORD_DEFAULT);
 
-    require("../contactsProject/databaseConnect.php");
+    require("C:\Users\blake\CS313\cs313-php\web\contactsProject\databaseConnect.sql");
     $db = get_db();
 
     $query = "INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');";
