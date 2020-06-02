@@ -28,10 +28,10 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     $user = htmlspecialchars($user);
     $hashPass = password_hash($pass, PASSWORD_DEFAULT);
 
-    require("db_connect.php");
+    require("\db_connect.php");
     $db = getDb();
 
-    $query = 'INSERT INTO _user(username, pass) VALUES(:user, :pass)';
+    $query = "INSERT INTO _user(username, pass) VALUES(:user, :pass);";
     $statement = $db->prepare($query);
 
     $statement->bindValue(':user', $user);
