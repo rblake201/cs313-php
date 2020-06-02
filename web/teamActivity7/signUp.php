@@ -31,7 +31,7 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     require("db_connect.php");
     $db = getDb();
 
-    $query = "INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');";
+    $query = "INSERT INTO _user(username, pass) VALUES('blake', 'password');";
     $statement = $db->query($query);
 
     header("Location: signIn.php");
