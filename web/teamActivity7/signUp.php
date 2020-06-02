@@ -31,8 +31,8 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     require("C:\Users\blake\CS313\cs313-php\web\contactsProject\databaseConnect.sql");
     $db = get_db();
 
-    $query = "INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');";
-    $statement = $db->query($query);
+ 
+    $statement = $db->query("INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');");
 
     header("Location: signIn.php");
 
