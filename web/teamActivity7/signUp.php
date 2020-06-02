@@ -1,11 +1,3 @@
-<?php
-
-require "db_connect.php";
-$db = getDb();
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,8 +28,12 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     $user = htmlspecialchars($user);
     $hashpass = password_hash($pass, PASSWORD_DEFAULT);
 
+    require("db_connect.php");
+    $db = getDb();
+
     $query = "INSERT INTO _user(username, pass) VALUES('blake', 'password');";
-    $statement = $db->query("INSERT INTO _user(username, pass) VALUES('blake', 'password');");
+    $statement = $db->prepare($query);
+    $statement->execute();
 
     header("Location: signIn.php");
 
