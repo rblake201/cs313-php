@@ -9,35 +9,11 @@
 
 <h1>Sign Up Page</h1>
 
-<form action="signUp.php" action="post">
+<form action="signIn.php" action="post">
+    <input type="hidden" name="posted" value=true>
     <label>Username<input type="text" name="user"></label><br>
     <label>Password<input type="text" name="pass"></label><br>
     <input type="submit">
 </form>
 </body>
 </html>
-
-<?php
-
-if($_POST['user'] != "" && $_POST['pass'] != "")
-{
-    echo "hello";
-
-    $user = $_POST['user'];
-    $pass = $_POST['pass'];
-
-    $user = htmlspecialchars($user);
-    $hashpass = password_hash($pass, PASSWORD_DEFAULT);
-
-    require("../contactsProject/databaseConnect.php");
-    $db - get_db();
-
-    $query = "INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');";
-    $statement = $db->query($query);
-
-    header("Location: signIn.php");
-
-}
-
-
-?>
