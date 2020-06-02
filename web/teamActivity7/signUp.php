@@ -19,8 +19,10 @@
 
 <?php
 
-if( $_POST['user'] != "" && $_POST['pass'] != "")
+if($_POST['user'] != "" && $_POST['pass'] != "")
 {
+    echo "hello";
+
     $user = $_POST['user'];
     $pass = $_POST['pass'];
 
