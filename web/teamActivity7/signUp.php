@@ -13,7 +13,7 @@
     <input type="hidden" name="posted" value=true>
     <label>Username<input type="text" name="user"></label><br>
     <label>Password<input type="text" name="pass"></label><br>
-    <input type="submit">
+    <input type="submit" value="Sign Up">
 </form>
 </body>
 </html>
@@ -35,7 +35,11 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     $statement = $db->query($query);
 
     header("Location: signIn.php");
-
+    die();
+}
+else
+{
+    echo '<script>alert("Please enter username and password")</script>';
 }
 
 
