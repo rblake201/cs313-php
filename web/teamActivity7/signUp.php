@@ -30,7 +30,7 @@ if($user != "" && $pass != "")
     require("../contactsProject/databaseConnect.php")
     $db - get_db();
 
-    $query = "INSERT INTO user(username, pass) VALUES('".$user."', '".$hashpass."');";
+    $query = "INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');";
     $statement = $db->query($query);
 
     header("Location: signIn.php");
