@@ -26,13 +26,17 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     $pass = $_POST['pass'];
 
     $user = htmlspecialchars($user);
-    $hashpass = password_hash($pass, PASSWORD_DEFAULT);
+    $hashPass = password_hash($pass, PASSWORD_DEFAULT);
 
     require("db_connect.php");
     $db = getDb();
 
-    $query = "INSERT INTO _user(username, pass) VALUES('blake', 'password');";
+    $query = 'INSERT INTO _user(username, pass) VALUES(:user, :pass)';
     $statement = $db->prepare($query);
+
+    $statement->bindValue(':user', $user);
+    $statement->bindValue(':pass', $hashPass);
+    
     $statement->execute();
 
     header("Location: signIn.php");
