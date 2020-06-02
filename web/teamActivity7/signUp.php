@@ -28,11 +28,11 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     $user = htmlspecialchars($user);
     $hashpass = password_hash($pass, PASSWORD_DEFAULT);
 
-    require("C:\Users\blake\CS313\cs313-php\web\contactsProject\databaseConnect.sql");
+    require("db_connect.php");
     $db = get_db();
 
- 
-    $statement = $db->query("INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');");
+    $query = "INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');";
+    $statement = $db->query($query);
 
     header("Location: signIn.php");
 
