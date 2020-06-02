@@ -27,7 +27,7 @@ if($user != "" && $pass != "")
     $user = htmlspecialchars($user);
     $hashpass = password_hash($pass, PASSWORD_DEFAULT);
 
-    require("../contactsProject/databaseConnect.php")
+    require("../contactsProject/databaseConnect.php");
     $db - get_db();
 
     $query = "INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');";
