@@ -19,11 +19,11 @@
 
 <?php
 
-$user = $_POST['user'];
-$pass = $_POST['pass'];
-
-if($user != "" && $pass != "")
+if( $_POST['user'] != "" && $_POST['pass'] != "")
 {
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
+
     $user = htmlspecialchars($user);
     $hashpass = password_hash($pass, PASSWORD_DEFAULT);
 
