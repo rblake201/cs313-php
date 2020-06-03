@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
 </head>
 <body>
 
@@ -40,6 +45,10 @@ if(isset($_POST['user']) && isset($_POST['pass']))
 
             header("Location: signIn.php");
             die();
+        }
+        else
+        {
+            echo "<p class='red'>" . "Error" . "</p>";
         }
     }
 }
