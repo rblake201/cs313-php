@@ -6,7 +6,8 @@ if(isset($_POST['user']) && isset($_POST['pass']))
     {
         if($_POST['pass'] == $_POST['pass1'])
         {
-            if(preg_match("^.*(?=.{7,})(?=.*[a-zA-Z])[a-zA-Z0-9]+$", $_POST['pass']))
+            if(strlen($_POST['pass']) > 6)
+            {
                 $user = $_POST['user'];
                 $pass = $_POST['pass'];
 
@@ -21,6 +22,7 @@ if(isset($_POST['user']) && isset($_POST['pass']))
 
                 header("Location: signIn.php");
                 die();
+            }
         }
         else
         {
