@@ -50,9 +50,9 @@ if(isset($_POST['user']) && isset($_POST['pass']))
 
 <form action="signUp.php" method="post">
     <label>Username<input type="text" name="user" id="user">
-    <span class="red" <?php if(isset($message)){echo $message;}?>></span></label><br>
+    <span class="red"> <?php if(isset($message)){echo $message;}?></span></label><br>
     <label>Password<input type="text" name="pass" id="pass">
-    <span class="red" <?php if(isset($message)){echo $message;}?>></span></label><br>
+    <span class="red"> <?php if(isset($message)){echo $message;}?></span></label><br>
     <label>Re-enter Password<input type="text" name="pass1" id="pass1"></label><br>
     <input type="submit" value="Sign Up">
 </form>
