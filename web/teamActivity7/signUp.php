@@ -6,7 +6,7 @@ if(isset($_POST['user']) && isset($_POST['pass']))
     {
         if($_POST['pass'] == $_POST['pass1'])
         {
-            if((strlen($_POST['pass']) > 6) && prep_match("(?:\d+[a-z]|[a-z]+\d)[a-z\d]*", $_POST['pass']))
+            if((strlen($_POST['pass']) > 6) && preg_match("(?:\d+[a-z]|[a-z]+\d)[a-z\d]*", $_POST['pass']))
             {
                 $user = $_POST['user'];
                 $pass = $_POST['pass'];
