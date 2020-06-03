@@ -44,18 +44,15 @@ if(isset($_POST['user']) && isset($_POST['pass']))
 
 		if (password_verify($pass, $hashpass))
 		{
-			$_SESSION['username'] = $user;
+			$_SESSION['user'] = $user;
 			header("Location: welcome.php");
 			die();
         }
-        else
-        {
-            echo '<script>alert("Incorrect Password")</script>';
-        }
+
     }
     else
     {
-        echo '<script>alert("Inccorrect Username")</script>';
+        echo '<script>alert("Incorrect Username and Password")</script>';
     }
 }
 
