@@ -37,10 +37,5 @@ if($_POST['user'] != "" && $_POST['pass'] != "")
     header("Location: signIn.php");
     die();
 }
-else
-{
-    echo '<script>alert("Please enter username and password")</script>';
-}
-
 
 ?>

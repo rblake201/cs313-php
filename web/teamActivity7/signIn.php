@@ -48,6 +48,10 @@ if(isset($_POST['user']) && isset($_POST['pass']))
 			header("Location: welcome.php");
 			die();
         }
+        else
+        {
+            echo '<script>alert("Incorrect Username and Password")</script>';
+        }
 
     }
     else
