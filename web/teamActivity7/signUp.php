@@ -6,26 +6,29 @@ if(isset($_POST['user']) && isset($_POST['pass']))
     {
         if($_POST['pass'] == $_POST['pass1'])
         {
-            $user = $_POST['user'];
-            $pass = $_POST['pass'];
+            if(preg_match("^.*(?=.{7,})(?=.*[a-zA-Z])[a-zA-Z0-9]+$", $_POST['pass']))
+                $user = $_POST['user'];
+                $pass = $_POST['pass'];
 
-            $user = htmlspecialchars($user);
-            $hashpass = password_hash($pass, PASSWORD_DEFAULT);
+                $user = htmlspecialchars($user);
+                $hashpass = password_hash($pass, PASSWORD_DEFAULT);
 
-            require("db_connect.php");
-            $db = getDb();
+                require("db_connect.php");
+                $db = getDb();
 
-            $query = "INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');";
-            $statement = $db->query($query);
+                $query = "INSERT INTO _user(username, pass) VALUES('".$user."', '".$hashpass."');";
+                $statement = $db->query($query);
 
-            header("Location: signIn.php");
-            die();
+                header("Location: signIn.php");
+                die();
         }
         else
         {
             echo "<p class='red'>" . "Error" . "</p>";
 
             $message = "*";
+
+
         }
     }
 }
