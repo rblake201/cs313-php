@@ -5,7 +5,7 @@ $db = getDb();
 
 if(isset($_POST['edit'])){
     $searchq = $_POST['edit'];
-    var_dump($searchq);
+    $_SESSION['edit'] = $_POST['edit'];
 
     $searchi = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE contact_id= '" . $searchq . "';");
     while ($row = $searchi->fetch(PDO::FETCH_ASSOC)) {
@@ -24,7 +24,7 @@ if(isset($_POST['posted'])){
     $addin = $_POST['addin'];
     $adddn = $_POST['adddn'];
 
-    var_dump($searchq);
+    var_dump($_SESSION['edit']);
 
     // $query = "UPDATE contact SET first_name = ".$addfn.",
     //                              last_name = ".$addln." WHERE id= " . $searchq . ";";
