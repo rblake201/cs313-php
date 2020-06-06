@@ -75,7 +75,7 @@ $db = getDb();
     <div class="row">
     <div class="column">
     <h3>Contacts List</h3>
-    <div style="overflow:auto; height:300px>
+    <div style="overflow:auto; height:300px;">
         <table>
             <tr>
                 <th>First Name</th>
