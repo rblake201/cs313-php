@@ -44,7 +44,7 @@ $db = getDb();
             clear: both;
         }
 
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 2000px) {
                 .column {
                 float: left;
                 height: 33.33%;
