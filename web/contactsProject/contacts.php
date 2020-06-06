@@ -83,6 +83,10 @@ $db = getDb();
         input[type=submit]:hover {
             background-color: #45a049;
         }
+
+        h3 {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
