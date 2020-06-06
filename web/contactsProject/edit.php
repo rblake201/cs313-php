@@ -13,7 +13,7 @@ $db = getDb();
     <title>Document</title>
     <style>
             input[type=text], select {
-            width: 500%;
+            width: 50%;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
@@ -23,7 +23,7 @@ $db = getDb();
         }
 
         input[type=submit] {
-            width: 500%;
+            width: 50%;
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;
