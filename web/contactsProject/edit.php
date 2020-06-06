@@ -40,10 +40,14 @@ $db = getDb();
             margin: auto;
             width: 50%;
         }
+        h1 {
+            font: arial;
+        }
     </style>
 </head>
 <body>
 <div class="center">
+<h1>Edit Contact</h1>
 <form name="editform" action="edit.php" method="post">
     <input type="hidden" name="posted" value=true>
     <input type="text" name="addfn" placeholder="Enter first name..."/><br>
