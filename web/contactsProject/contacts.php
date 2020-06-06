@@ -32,41 +32,41 @@ $db = getDb();
              box-sizing: border-box;
         }
         .column {
-        float: left;
-        width: 33.33%;
-        padding: 10px;
-        height: 300px;
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            height: 300px;
         }
 
         .row:after {
-        content: "";
-        display: table;
-        clear: both;
+            content: "";
+            display: table;
+            clear: both;
         }
 
         input[type=text], select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
 
         input[type=submit] {
-        width: 100%;
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
         input[type=submit]:hover {
-        background-color: #45a049;
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -75,7 +75,7 @@ $db = getDb();
     <div class="row">
     <div class="column">
     <h3>Contacts List</h3>
-    <div style="overflow:auto;">
+    <div style="overflow:auto; height:300px>
         <table>
             <tr>
                 <th>First Name</th>
