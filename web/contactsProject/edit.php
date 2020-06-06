@@ -23,6 +23,12 @@ if(isset($_POST['posted'])){
     $addin = $_POST['addin'];
     $adddn = $_POST['adddn'];
 
+    $query = "UPDATE contact SET first_name = ".$addfn.",
+                                 last_name = ".$addln." WHERE id= " . $searchq . ";";
+    
+
+
+    $edit = $db->query($query);
 
 }
 
