@@ -86,6 +86,7 @@ $db = getDb();
 
         h3 {
             text-align: center;
+            font: arial;
         }
     </style>
 </head>
