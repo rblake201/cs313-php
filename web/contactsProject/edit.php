@@ -2,6 +2,7 @@
 
 require "databaseConnect.php";
 $db = getDb();
+$searchq = $_POST['edit'];
 
 if(isset($_POST['edit'])){
     $searchq = $_POST['edit'];
