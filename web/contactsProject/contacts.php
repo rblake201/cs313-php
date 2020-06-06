@@ -184,6 +184,9 @@ $db = getDb();
 
             echo '<script>alert("Contact Added! Please refresh page")</script>';
 
+            header("refresh: 0");
+            die();
+
         }
     }
 
@@ -194,6 +197,9 @@ $db = getDb();
         $delete1 = $db->query("DELETE FROM contact WHERE id= " . $searchq . ";");
 
         echo '<script>alert("Contact Deleted! Please refresh page")</script>';
+
+        header("refresh: 0");
+        die();
 
     }
 ?>
