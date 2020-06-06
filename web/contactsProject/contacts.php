@@ -182,9 +182,10 @@ $db = getDb();
 
             $result = $db->query($query);
 
+            header("Refresh:0");
+
             echo '<script>alert("Contact Added!")</script>';
 
-            header("Refresh:0");
         }
     }
 
