@@ -84,14 +84,14 @@ $db = getDb();
             background-color: #45a049;
         }
 
-        h3 {
+        h3, h1 {
             text-align: center;
             font: arial;
         }
     </style>
 </head>
 <body>
-    <h1 style="text-align:center">Contacts</h1>
+    <h1>Contacts</h1>
     <div class="row">
     <div class="column">
     <h3>Contacts List</h3>
