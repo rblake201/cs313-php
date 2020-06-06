@@ -44,12 +44,12 @@ $db = getDb();
             clear: both;
         }
 
-        @media only screen and (max-width: 1200px) {
+        @media only screen and (max-width: 1260px) {
                 .column {
                 float: left;
                 height: 33.33%;
                 padding: 10px;
-                width: 400px;
+                width: 420px;
             }
 
             .row:after {
