@@ -36,10 +36,13 @@ $db = getDb();
         input[type=submit]:hover {
             background-color: #45a049;
         }
+        .center {
+            margin: auto;
+        }
     </style>
 </head>
 <body>
-<div style="margin: auto;">
+<div class="center">
 <form name="editform" action="edit.php" method="post">
     <input type="hidden" name="posted" value=true>
     <input type="text" name="addfn" placeholder="Enter first name..."/><br>
