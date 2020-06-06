@@ -41,6 +41,7 @@ $db = getDb();
             width: 50%;
         }
         h1 {
+            text-align: center;
             font: arial;
         }
     </style>
