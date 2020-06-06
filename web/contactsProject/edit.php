@@ -27,8 +27,8 @@ if(isset($_POST['posted'])){
 
     $searchq = $_SESSION['edit'];
 
-    $query = "UPDATE contact SET first_name = ".$addfn.",
-                                 last_name = ".$addln." WHERE id= " . $searchq . ";";
+    $query = "UPDATE contact SET first_name = '".$addfn."',
+                                 last_name = '".$addln."' WHERE id= " . $searchq . ";";
     
     // $query1 = "UPDATE info SET phone = ".$addpn."
     //                            personal_email = ".$addpe."
