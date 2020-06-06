@@ -26,6 +26,8 @@ if(isset($_POST['posted'])){
 
     echo $searchq;
 
+    echo "Hello";
+
     // $query = "UPDATE contact SET first_name = ".$addfn.",
     //                              last_name = ".$addln." WHERE id= " . $searchq . ";";
     
