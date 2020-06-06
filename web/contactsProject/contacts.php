@@ -16,13 +16,13 @@ $db = getDb();
         table {
             border-collapse: collapse;
             width: 100%;
-            color: #4CAF50;
+            color: black;
             font-family: monospace;
             font-size: 25px;
             text-align: left;
         }
         th {
-            background-color: #588c7e;
+            background-color: #4CAF50;
             color: white;
         }
         tr:nth-child(even) {
