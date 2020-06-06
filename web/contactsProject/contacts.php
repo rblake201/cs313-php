@@ -16,7 +16,7 @@ $db = getDb();
         table {
             border-collapse: collapse;
             width: 100%;
-            color: #588c7e;
+            color: #4CAF50;
             font-family: monospace;
             font-size: 25px;
             text-align: left;
