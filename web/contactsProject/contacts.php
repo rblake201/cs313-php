@@ -116,7 +116,7 @@ $db = getDb();
                                                                                                            <input type='submit' value='Edit'/>" .
                                                                                                           "<form name='deleteForm_$i' action='contacts.php' method='post'>" .
                                                                                                           "<input type='hidden' name='delete' value='$id'>
-                                                                                                           <input type='submit' value='Delete'/>""</td></tr>";
+                                                                                                           <input type='submit' value='Delete'/>" . "</td></tr>";
 
                     echo '</form>';
                 }
