@@ -36,6 +36,7 @@ $db = getDb();
             width: 33.33%;
             padding: 10px;
             height: 300px;
+            flex-wrap: wrap;
         }
 
         .row:after {
