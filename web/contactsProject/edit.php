@@ -14,7 +14,28 @@ if(isset($_POST['edit'])){
 }
 
 if(isset($_POST['posted'])){
-    $edit = $db->query("UPDATE contact AS u JOIN info AS n ON u.id = n.contact_id WHERE u.id= " . $searchq . ";");
+    $addfn = $_POST['addfn'];
+    $addln = $_POST['addln'];
+    $addpn = $_POST['addpn'];
+    $addpe = $_POST['addpe'];
+    $addwe = $_POST['addwe'];
+    $addfan = $_POST['addfan'];
+    $addin = $_POST['addin'];
+    $adddn = $_POST['adddn'];
+
+    $query = "UPDATE contact SET first_name = ".$addfn.",
+                                 last_name = ".$addln." WHERE id= " . $searchq . ";";
+    
+    $query1 = "UPDATE info SET phone = ".$addpn."
+                               personal_email = ".$addpe."
+                               work_email = ".$addwe."
+                               facebook =  ".$addfan."
+                               instagram = ".$addin."
+                               discord = ".$adddn."
+               WHERE contact_id= " . $searchq . ";";
+
+    $edit = $db->query($query);
+    $edit1 = $db->query($query1);
 }
 
 
