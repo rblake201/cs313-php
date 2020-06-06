@@ -39,10 +39,7 @@ $db = getDb();
     </style>
 </head>
 <body>
-    
-</body>
-</html>
-
+<div style="margin: auto;">
 <form name="editform" action="edit.php" method="post">
     <input type="hidden" name="posted" value=true>
     <input type="text" name="addfn" placeholder="Enter first name..."/><br>
@@ -55,3 +52,6 @@ $db = getDb();
     <input type="text" name="adddn" placeholder="Enter discord name..."/><br>
     <input type="submit" value="Save"/>
 </form>
+</div>
+</body>
+</html>
