@@ -95,6 +95,9 @@ if(isset($_POST['posted'])){
             text-align: center;
             font: arial;
         }
+        label {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
