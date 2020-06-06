@@ -103,13 +103,13 @@ if(isset($_POST['posted'])){
 <form name="editform" action="edit.php" method="post">
     <input type="hidden" name="posted" value=true>
     <input type="text" name="addfn" value="<?php echo $_SESSION['fn']; ?>"/><br>
-    <input type="text" name="addln" placeholder="Enter last name..."/><br>
-    <input type="text" name="addpn" placeholder="Enter phone number..."/><br>
-    <input type="text" name="addpe" placeholder="Enter personal email..."/><br>
-    <input type="text" name="addwe" placeholder="Enter work email..."/><br>
-    <input type="text" name="addfan" placeholder="Enter facebook name..."/><br>
-    <input type="text" name="addin" placeholder="Enter instagram name..."/><br>
-    <input type="text" name="adddn" placeholder="Enter discord name..."/><br>
+    <input type="text" name="addln" value="<?php echo $_SESSION['ln']; ?>"/><br>
+    <input type="text" name="addpn" value="<?php echo $_SESSION['pn']; ?>"/><br>
+    <input type="text" name="addpe" value="<?php echo $_SESSION['pe']; ?>"/><br>
+    <input type="text" name="addwe" value="<?php echo $_SESSION['we']; ?>"/><br>
+    <input type="text" name="addfan" value="<?php echo $_SESSION['fa']; ?>"/><br>
+    <input type="text" name="addin" value="<?php echo $_SESSION['in']; ?>"/><br>
+    <input type="text" name="adddn" value="<?php echo $_SESSION['di']; ?>"/><br>
     <input type="submit" value="Save"/>
 </form>
 </div>
