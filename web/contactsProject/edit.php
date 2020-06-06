@@ -12,6 +12,15 @@ if(isset($_POST['edit'])){
     while ($row = $searchi->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["personal_email"] . "</td><td>"
         . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></tr>";
+
+        $_SESSION['fn'] = $row["first_name"];
+        $_SESSION['ln'] = $row["last_name"];
+        $_SESSION['pn'] = $row["phone"];
+        $_SESSION['pe'] = $row["personal_email"];
+        $_SESSION['we'] = $row["work_email"];
+        $_SESSION['fa'] = $row["facebook"];
+        $_SESSION['in'] = $row["instagram"];
+        $_SESSION['di'] = $row["discord"];
     }
 }
 
@@ -93,7 +102,7 @@ if(isset($_POST['posted'])){
 <h1>Edit Contact</h1>
 <form name="editform" action="edit.php" method="post">
     <input type="hidden" name="posted" value=true>
-    <input type="text" name="addfn" placeholder="Enter first name..."/><br>
+    <input type="text" name="addfn" value="<?php echo $_SESSION['fn']; ?>"/><br>
     <input type="text" name="addln" placeholder="Enter last name..."/><br>
     <input type="text" name="addpn" placeholder="Enter phone number..."/><br>
     <input type="text" name="addpe" placeholder="Enter personal email..."/><br>
