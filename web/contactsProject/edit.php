@@ -2,10 +2,10 @@
 
 require "databaseConnect.php";
 $db = getDb();
-$searchq = $_POST['edit'];
 
 if(isset($_POST['edit'])){
     $searchq = $_POST['edit'];
+    $GLOBALS['a'] = $_POST['edit'];
 
     $searchi = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE contact_id= '" . $searchq . "';");
     while ($row = $searchi->fetch(PDO::FETCH_ASSOC)) {
@@ -24,9 +24,7 @@ if(isset($_POST['posted'])){
     $addin = $_POST['addin'];
     $adddn = $_POST['adddn'];
 
-    echo $searchq;
-
-    echo "Hello";
+    echo $GLOBALS['a'];
 
     // $query = "UPDATE contact SET first_name = ".$addfn.",
     //                              last_name = ".$addln." WHERE id= " . $searchq . ";";
