@@ -184,7 +184,7 @@ $db = getDb();
 
             echo '<script>alert("Contact Added! Please refresh page")</script>';
 
-            header("refresh: 0");
+            header("Location: contacts.php");
             die();
 
         }
