@@ -3,6 +3,21 @@
 require "databaseConnect.php";
 $db = getDb();
 
+if(isset($_POST['edit'])){
+    $searchq = $_POST['edit'];
+
+    $searchi = $db->query("SELECT * FROM contact AS u JOIN info AS n ON u.id = n.contact_id WHERE contact_id= '" . $searchq . "';");
+    while ($row = $searchi->fetch(PDO::FETCH_ASSOC)) {
+        echo "<tr><td>" . $row["first_name"]. "</td><td>" . $row["last_name"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["personal_email"] . "</td><td>"
+        . $row["work_email"] . "</td><td>" . $row["facebook"] . "</td><td>" . $row["instagram"] . "</td><td>" . $row["discord"] . "</td></tr>";
+    }
+}
+
+if(isset($_POST['posted'])){
+    $edit = $db->query("UPDATE contact AS u JOIN info AS n ON u.id = n.contact_id WHERE u.id= " . $searchq . ";");
+}
+
+
 ?>
 
 <!DOCTYPE html>
