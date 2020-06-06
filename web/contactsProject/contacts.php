@@ -36,13 +36,27 @@ $db = getDb();
             width: 33.33%;
             padding: 10px;
             height: 300px;
-            flex-wrap: wrap;
         }
 
         .row:after {
             content: "";
             display: table;
             clear: both;
+        }
+
+        @media only screen and (max-width: 600px) {
+                .column {
+                float: left;
+                height: 33.33%;
+                padding: 10px;
+                width: 300px;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
         }
 
         input[type=text], select {
