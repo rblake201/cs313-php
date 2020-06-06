@@ -101,6 +101,7 @@ $db = getDb();
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Info</th>
+                <th>Edit</th>
                 <th>Delete</th>
             </tr>
             <?php
