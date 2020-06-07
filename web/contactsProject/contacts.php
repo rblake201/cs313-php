@@ -153,10 +153,10 @@ $db = getDb();
 </html>
 
 <?php
+ob_start();
 
     if(isset($_POST['posted']))
     {
-        ob_start();
         if($_POST['addfn'] == '')
         {
             echo '<script>alert("Please enter first name")</script>';
@@ -182,7 +182,6 @@ $db = getDb();
 
 
             $result = $db->query($query);
-            ob_end();
 
             header("Location: message.php?msg=add");
             die();
