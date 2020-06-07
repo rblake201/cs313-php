@@ -182,7 +182,7 @@ $db = getDb();
 
             $result = $db->query($query);
 
-            header('Location: message.php?msg=add');
+            header('Location: message.php; ?msg=add');
             die();
 
         }
