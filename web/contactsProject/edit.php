@@ -48,7 +48,6 @@ if(isset($_POST['posted'])){
     $edit1 = $db->query($query1);
 
     echo "<script type='text/javascript'> document.location = 'message.php'; </script>";
-    die();
 }
 
 

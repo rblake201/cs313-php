@@ -184,7 +184,6 @@ ob_start();
             $result = $db->query($query);
 
             echo "<script type='text/javascript'> document.location = 'message.php'; </script>";
-            die();
 
         }
     }
@@ -196,7 +195,6 @@ ob_start();
         $delete1 = $db->query("DELETE FROM contact WHERE id= " . $searchq . ";");
 
         echo "<script type='text/javascript'> document.location = 'message.php'; </script>";
-        die();
 
     }
 ?>
