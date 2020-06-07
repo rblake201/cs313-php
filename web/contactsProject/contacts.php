@@ -182,10 +182,8 @@ $db = getDb();
 
             $result = $db->query($query);
 
-            header("Refresh: 0; Location: contacts.php");
+            header('Location: message.php?msg=add');
             die();
-
-            echo '<script>alert("Contact Added! Please refresh page")</script>';
 
         }
     }
@@ -196,10 +194,8 @@ $db = getDb();
         $delete = $db->query("DELETE FROM info WHERE contact_id= " . $searchq . ";");
         $delete1 = $db->query("DELETE FROM contact WHERE id= " . $searchq . ";");
 
-        header("Refresh: 0; Location: contacts.php");
+        header('Location: page.php?msg=delete');
         die();
-
-        echo '<script>alert("Contact Deleted! Please refresh page")</script>';
 
     }
 ?>

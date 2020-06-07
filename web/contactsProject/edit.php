@@ -47,7 +47,8 @@ if(isset($_POST['posted'])){
     $edit = $db->query($query);
     $edit1 = $db->query($query1);
 
-    header("Location: contacts.php");
+    header('Location: message.php?msg=edit');
+    die();
 }
 
 
