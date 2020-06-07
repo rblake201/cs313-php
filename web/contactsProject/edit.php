@@ -47,6 +47,8 @@ if(isset($_POST['posted'])){
     $edit = $db->query($query);
     $edit1 = $db->query($query1);
 
+    echo "<script type="text/javascript">alert("Contact Updated!");</script>";
+
     echo "<script type='text/javascript'> document.location = 'redirect.php'; </script>";
 }
 
