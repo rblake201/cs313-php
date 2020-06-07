@@ -183,7 +183,7 @@ ob_start();
 
             $result = $db->query($query);
 
-            echo "<script type='text/javascript'> document.location = 'message.php'; </script>";
+            echo "<script type='text/javascript'> document.location = 'redirect.php'; </script>";
 
         }
     }
@@ -194,7 +194,7 @@ ob_start();
         $delete = $db->query("DELETE FROM info WHERE contact_id= " . $searchq . ";");
         $delete1 = $db->query("DELETE FROM contact WHERE id= " . $searchq . ";");
 
-        echo "<script type='text/javascript'> document.location = 'message.php'; </script>";
+        echo "<script type='text/javascript'> document.location = 'redirect.php'; </script>";
 
     }
 ?>
