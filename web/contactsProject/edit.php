@@ -47,7 +47,7 @@ if(isset($_POST['posted'])){
     $edit = $db->query($query);
     $edit1 = $db->query($query1);
 
-    header('Location: message.php?msg=edit');
+    echo "<script type='text/javascript'> document.location = 'message.php'; </script>";
     die();
 }
 

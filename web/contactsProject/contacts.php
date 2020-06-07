@@ -183,7 +183,7 @@ ob_start();
 
             $result = $db->query($query);
 
-            header("Location: message.php?msg=add");
+            echo "<script type='text/javascript'> document.location = 'message.php'; </script>";
             die();
 
         }
@@ -195,7 +195,7 @@ ob_start();
         $delete = $db->query("DELETE FROM info WHERE contact_id= " . $searchq . ";");
         $delete1 = $db->query("DELETE FROM contact WHERE id= " . $searchq . ";");
 
-        header('Location: page.php?msg=delete');
+        echo "<script type='text/javascript'> document.location = 'message.php'; </script>";
         die();
 
     }
